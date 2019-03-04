@@ -1,4 +1,4 @@
---
+---
 applications:
 - name : rh-ibm-node-app
   instances: 1
