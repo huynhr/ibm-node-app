@@ -10,7 +10,7 @@ if (process.env.VCAP_SERVICES) {
   var env = JSON.parse(process.env.VCAP_SERVICES);
   appConfig = {
     'org': env["iotf-service"][0].credentials.org,
-    'id': 'bi-nodeserver',
+    'id': 'rh-ibm-node-app',
     'auth-key': env["iotf-service"][0].credentials.apiKey,
     'auth-token': env["iotf-service"][0].credentials.apiToken
   }
@@ -35,7 +35,7 @@ var server = app.listen(serverPort, function () {
   appClient.on('connect', function () {
     appClient.subscribeToDeviceEvents();
   });
-  
+
   // handle device events when they arrive
   appClient.on('deviceEvent', function (deviceType, deviceId, eventType, format, payload) {
     responseString = "Device event at " + new Date().toString() + " from " + deviceType +

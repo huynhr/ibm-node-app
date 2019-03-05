@@ -9,6 +9,7 @@
   "author": "Raymond Huynh",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "ibmiotf": "^0.2.41"
   }
 }
