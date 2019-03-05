@@ -3,3 +3,5 @@ applications:
 - name : rh-ibm-node-app
   instances: 1
   memory: 256M
+services:
+  - rh-CourseraBoilerPlateApp-iotf-service
